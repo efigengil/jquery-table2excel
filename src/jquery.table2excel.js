@@ -141,7 +141,9 @@
 
             if ( $.isArray(table) ) {
                 for (i in table) {
-                    fullTemplate += e.template.table.head + "{table" + i + "}" + e.template.table.tail;
+					    if (i.indexOf('tr')>0){
+							fullTemplate += e.template.table.head + "{table" + i + "}" + e.template.table.tail;
+						}
                 }
             }
 
